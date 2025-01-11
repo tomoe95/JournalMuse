@@ -1,0 +1,43 @@
+{% extends "layout2.html" %}
+
+{% block css_file %}
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap" rel="stylesheet">
+<link href="/static/main.css" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+Your Journal History
+{% endblock %}
+
+{% block main %}
+
+<header class="top-bar">
+    <div class="user-info">
+        <h2>A Canvas of Your Life.</h2>
+        <h4>Here’s Your Journaling History</h4>
+    </div>
+</header>
+
+<main>
+    <!-- Journaling History Section -->
+    <section class="history-section">
+        <h2>Journal Entries</h2>
+        <div class="history-container">
+            {% for entry in data %}
+            <div class="history-entry">
+                <div class="entry-header">
+                    <h3>{{ entry[0] }}</h3>
+                    <p>{{ entry[1] }}</p>
+                </div>
+                <p class="entry-description">{{ entry[2] }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 JournalMuse. Have a great day, {{ username[0] }}! 🌈</p>
+</footer>
+
+{% endblock %}

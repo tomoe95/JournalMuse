@@ -1,0 +1,132 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body {
+    background-image: url("https://preview.colorlib.com/theme/bootstrap/login-form-20/images/bg.jpg.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 300px;
+}
+
+/* Container Styles */
+.container {
+    max-width: 600px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.container header {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form {
+    margin-top: 10px;
+}
+
+.input-box {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.input-box input {
+    height: 50px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    padding: 0 20px;
+    font-size: 1rem;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.input-box input:focus {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styles */
+.form button {
+    height: 50px;
+    width: 100%;
+    background-color: #fbceb5;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 30px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.form button:hover {
+    background-color: #f8b299;
+    cursor: pointer;
+    transform: translateY(-3px);
+}
+
+/* Label Styles */
+.label {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Column Layout */
+.form .column {
+    display: flex;
+    gap: 20px;
+    height: 60px;
+    flex-wrap: nowrap;
+}
+
+.form .column input {
+    flex: 1;
+}
+
+@media screen and (max-width: 500px) {
+    .form .column {
+        flex-wrap: wrap;
+    }
+
+    body {
+        padding: 0 15px;
+    }
+}
+
+/* Link Styles */
+a {
+    font-size: 0.9rem;
+    color: #333;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #f8b299;
+}

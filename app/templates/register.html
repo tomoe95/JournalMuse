@@ -1,0 +1,45 @@
+{% extends "layout1.html" %}
+
+{% block css_file %}
+<link href="/static/styles_register.css" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+Register
+{% endblock %}
+
+{% block main %}
+<section class="container">
+    <header>
+        <a href="/login" type="button" class="btn-close" aria-label="Close"></a>
+        Registration form
+    </header>
+
+    <form action="/register" method="POST" class="form">
+        <div class="column">
+            <div class="input-box">
+                <input autocomplete="off" autofocus type="text" placeholder="First Name" name="first_name" required>
+            </div>
+            <div class="input-box">
+                <input autocomplete="off" type="text" placeholder="Last Name" name="last_name" required>
+            </div>
+        </div>
+        <div class="input-box">
+            <label>Birth Date</label>
+            <input autocomplete="off" type="date" placeholder="Birth Date" name="birth" required>
+        </div>
+        <div class="input-box">
+            <input autocomplete="off" type="text" placeholder="Username" name="username" required>
+        </div>
+        <div class="column">
+            <div class="input-box">
+                <input autocomplete="off" type="password" placeholder="Password" name="password" required>
+            </div>
+            <div class="input-box">
+                <input autocomplete="off" type="password" placeholder="Confirm Password" name="confirm" required>
+            </div>
+        </div>
+        <button href="/login">Submit</button>
+    </form>
+</section>
+{% endblock %}

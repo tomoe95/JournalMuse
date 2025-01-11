@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+
+# Flask session folder
+flask_session/
+
+# MacOS system files
+.DS_Store
+
+# SQLite database files
+# *.db
+
+# Environment files
+.env
+*.env

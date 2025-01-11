@@ -1,0 +1,50 @@
+{% extends "layout1.html" %}
+
+{% block css_file %}
+<link href="/static/styles.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair Display" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+Log In
+{% endblock %}
+
+{% block main %}
+
+<div class="box">
+    <div class="container">
+        <div class="title">
+            <h1 class='special-title'>JournalMuse</h1>
+        </div>
+        <div class="title">
+            <div class="text">
+                <h3>Evoking inspiration for daily journaling.</h3>
+            </div>
+        </div>
+        <span>Have an account?</span>
+        <header>Log In</header>
+        <form action="/login" method="POST">
+            <div class="input-field">
+                <input autocomplete="off" autofocus type="text" class="input" placeholder="Username" name="username"
+                    required>
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-field">
+                <input autocomplete="off" type="password" class="input" placeholder="Password" name="password" required>
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-field">
+                <button autocomplete="off" type="submit" class="submit">Log In</button>
+            </div>
+        </form>
+
+        <div class="bottom">
+            <label><a href="/reset_password">Froget password?</a></label>
+            <p></p>
+            <label><a href="/register">Create new account</a></label>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

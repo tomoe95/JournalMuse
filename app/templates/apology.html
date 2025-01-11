@@ -1,0 +1,21 @@
+{% extends "layout1.html" %}
+
+{% block css_file %}
+<link href="/static/styles.css" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+Apology
+{% endblock %}
+
+{% block main %}
+<!-- https://memegen.link/ -->
+<img alt="{{ top }}" class="img-fluid"
+    src="https://api.memegen.link/images/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.png?background=https://en.meming.world/images/en/f/f0/Winnie_the_Pooh_Reading.jpg"
+    title="{{ top }}">
+{% endblock %}
+
+<!--
+https://api.memegen.link/images/custom/_/my_background.png?background=http://www.gstatic.com/webp/gallery/1.png
+https://api.memegen.link/images/custom/_/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://en.meming.world/images/en/f/f0/Winnie_the_Pooh_Reading.jpg&width=800
+-->

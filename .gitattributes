@@ -1,0 +1,15 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Handle specific file types
+*.py text       # Python files are treated as text
+*.html text     # HTML files are treated as text
+*.css text      # CSS files are treated as text
+*.js text       # JavaScript files are treated as text
+*.json text     # JSON files are treated as text
+*.md text       # Markdown files are treated as text
+*.txt text      # Plain text files are treated as text
+
+# Treat binary files correctly
+*.ico binary    # ICO image files are binary
+*.db binary     # Database files are binary

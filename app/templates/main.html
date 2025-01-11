@@ -1,0 +1,74 @@
+{% extends "layout2.html" %}
+
+{% block css_file %}
+<link href="/static/main.css" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+Your Journaling
+{% endblock %}
+
+{% block main %}
+
+<header class="top-bar">
+    <div class="user-info">
+        <h2>Welcome back, <b>{{ username }}</b>! 😉</h2>
+        <h4>Today’s Date: <span id="today-date"></span></h4>
+    </div>
+</header>
+
+<main>
+    <!-- Input Section -->
+    <section class="input-section">
+        <h2>What’s on Your Mind Today?</h2>
+        <form action="/" method="POST" class="journal-form">
+            <label for="journal-date">Date:</label>
+            <input type="date" id="journal-date" name="date" required>
+
+            <label for="journal-feeling">Feeling:</label>
+            <select id="journal-feeling" name="feeling" required>
+                <option value="😊">😊 Happy</option>
+                <option value="😢">😢 Sad</option>
+                <option value="😡">😡 Angry</option>
+                <option value="😌">😌 Relaxed</option>
+            </select>
+
+            <label for="journal-description">Description:</label>
+            <textarea id="journal-description" name="description" placeholder="Write about your day..." required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Recap Section -->
+    <section class="recap-section">
+        <h2>Your Journaling Summary</h2>
+        <div class="recap-container">
+            <div class="weekly-recap">
+                <h3>Weekly Recap</h3>
+                <canvas id="weekly-chart"></canvas>
+            </div>
+            <div class="all-recap">
+                <h3>Every Recap</h3>
+                <canvas id="all-chart"></canvas>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 JournalMuse. Keep exploring your thoughts💭</p>
+</footer>
+
+<!--  jQuery CDN Link Version 2.1.1 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!--  Chart.js Version 1.0.2 CDN Link - Supports Chart.js Extension   -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<!--  jQuery CDN Link Version 3.6.1 -->
+<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"> </script>
+<!--  Chart.js Version 4.0.1 CDN Link - Supports Chart.js Plugin  -->
+<script src= "https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"> </script>
+
+<script  src="/static/graph.js"></script>
+
+{% endblock %}
