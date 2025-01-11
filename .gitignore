@@ -11,7 +11,7 @@ flask_session/
 .DS_Store
 
 # SQLite database files
-# *.db
+*.db
 
 # Environment files
 .env
